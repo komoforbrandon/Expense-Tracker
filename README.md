@@ -1,6 +1,6 @@
 # Expense Tracker App
 
-A responsive front-end expense tracker built with HTML, CSS, and vanilla JavaScript. The app lets users add income and expense transactions, updates account totals in real time, and visualizes expense categories with a doughnut chart powered by Chart.js.
+A responsive frontend expense tracker built with HTML, CSS, and vanilla JavaScript. The app lets users add income and expense transactions, updates account totals in real time, and visualizes expense categories with a doughnut chart powered by Chart.js.
 
 ## Overview
 
@@ -110,7 +110,7 @@ The interface loads with pre-filled sample values and starter transaction entrie
 
 ## Limitations
 
-This version is a front-end prototype and has a few known limitations:
+This version is a frontend prototype and has a few known limitations:
 
 - No data persistence after page refresh
 - No backend, authentication, or user accounts
