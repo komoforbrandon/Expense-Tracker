@@ -15,7 +15,7 @@
         <div class="header">
             <h1>&#x1F3DB; EXPENSE TRACKER</h1>
             <!-- <img src="assets/Profil.png" alt="profile" class="profileicon"> -->
-             <button class="login">Log in</button>
+            <button class="login">Log in</button>
         </div>
     </header>
     <main>
@@ -39,7 +39,7 @@
                     <h2 class="expenseamt">&dollar;<span id="expense-amount">4,249.50</span></h2>
                 </div>
             </article>
-            <form id="inpexp-container">
+            <article id="inpexp-container">
                 <h3>Add New Transaction</h3>
                 <article class="transactions">
                     <div>
@@ -73,23 +73,36 @@
                         </select>
                     </div>
                 </article>
-                <button id="trans-btn">Add Transaction</button>
-            </form>
+                <button id="trans-btn" type="submit">Add Transaction</button>
+            </article>
         </section>
 
         <section class="transaction-history">
             <h2>Transaction History</h2>
             <aritcle class="history">
-                <div class="add-history">
+                <div class="add-history-income">
                     <div class="trans-state">
-                        <h5 class="icon">&#x1F861;</h5>
+                        <h5 class="icon-income">&#x1F861;</h5>
                         <div class="hist-info">
                             <p class="hist-descrip">Salary</p>
-                            <p class="hist-date">Oct 25, 2025</p>
+                            <p class="hist-date">12:30 PM, Oct 25, 2025</p>
                         </div>
                     </div>
                     <div class="amount-btn">
-                        <p id="added-amt">+$45,000.00</p>
+                        <p id="added-amt-income">+&dollar;10,000.00</p>
+                        <p id="del-btn">&cross;</p>
+                    </div>
+                </div>
+                  <div class="add-history-expense">
+                    <div class="trans-state">
+                        <h5 class="icon-expense">&#x1f863;</h5>
+                        <div class="hist-info">
+                            <p class="hist-descrip">School Fee</p>
+                            <p class="hist-date">12:30 PM, Oct 25, 2025</p>
+                        </div>
+                    </div>
+                    <div class="amount-btn">
+                        <p id="added-amt-expense">-&dollar;4249.5</p>
                         <p id="del-btn">&cross;</p>
                     </div>
                 </div>
@@ -103,7 +116,7 @@
                     <h3 class="visa">VISA</h3>
                     <div>
                         <p>Current Balance</p>
-                        <h3>$ 5,750.50</h3>
+                        <h3 id="card-amt">$ 5,750.50</h3>
                     </div>
                 </header>
                 <img src="assets/chipicon.png" alt="Chip icon" class="chipicon">
