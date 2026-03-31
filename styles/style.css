@@ -173,7 +173,7 @@ h2 {
 }
 
 .trans-state,
-.amount-btn{
+.amount-btn {
   display: flex;
 }
 
@@ -295,7 +295,7 @@ footer {
   text-align: center;
 }
 
-footer p {
+.footer p {
   margin: auto 0;
   font-size: 18px;
 }
@@ -337,4 +337,4 @@ footer p {
     text-align: center;
     gap: 10px;
   }
-} 
+}
