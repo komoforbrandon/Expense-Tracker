@@ -206,15 +206,18 @@ h2 {
   font-weight: 500;
 }
 
-#added-amt-income {
+#added-amt-income,
+.added-amt-income {
   color: #089608;
 }
 
-#added-amt-expense {
+#added-amt-expense,
+.added-amt-expense {
   color: #a00e0e;
 }
 
-#del-btn {
+#del-btn,
+.del-btn {
   cursor: pointer;
 }
 
@@ -296,3 +299,42 @@ footer p {
   margin: auto 0;
   font-size: 18px;
 }
+
+@media (max-width: 1000px) {
+  .header {
+    width: 95%;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .header button {
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  main {
+    width: 95%;
+    grid-template-columns: 100%;
+  }
+
+  .transaction-history {
+    height: auto;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .hist-date {
+    display: none;
+  }
+
+  .footer {
+    width: 95%;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+} 
