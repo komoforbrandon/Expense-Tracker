@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="assets/" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header-container">
+        <div class="header">
+            <h1>&#x1F3DB; EXPENSE TRACKER</h1>
+            <!-- <img src="assets/Profil.png" alt="profile" class="profileicon"> -->
+            <button class="login">Log in</button>
+        </div>
+    </header>
+    <main>
+        <section class="account-sec">
+            <article>
+                <h2 class="accdetail">Account Details</h2>
+            </article>
+            <article>
+                <h3 class="accdetail">Balance Summary</h3>
+                <span class="descriptive">Total Balance</span>
+                <h1 id="totalamt"><span id="total-amount">5,750</span>CFA</h1>
+                <hr>
+            </article>
+            <article class="income-expense">
+                <div class="income">
+                    <span class="descriptive">Total Income</span>
+                    <h2 class="incomeamt"><span id="income-amount">10,000</span>CFA</h2>
+                </div>
+                <div class="expense">
+                    <span class="descriptive">Total Expense</span>
+                    <h2 class="expenseamt">&dollar;<span id="expense-amount">4,249</span>CFA</h2>
+                </div>
+            </article>
+            <article id="inpexp-container">
+                <h3>Add New Transaction</h3>
+                <article class="transactions">
+                    <div>
+                        <label for="options">Type</label>
+                        <select name="transaction" id="options">
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="input-amount">Amount</label>
+                        <input type="number" id="input-amount" placeholder="0.00 CFA" required>
+                    </div>
+                    <div>
+                        <label for="category">Category</label>
+                        <input type="text" name="category" id="category" placeholder="e.g salary" required>
+                    </div>
+                    <p> </p>
+                    <div id="expense-cat">
+                        <label for="expensecategory">Expense Type <i>(optional)</i></label>
+                        <select name="expensecategory" id="expensecategory">
+                            <option value="">--Select option--</option>
+                            <option value="food">Food</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="health">Health</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                </article>
+                <button id="trans-btn" type="submit">Add Transaction</button>
+            </article>
+        </section>
+
+        <section class="transaction-history">
+            <h2>Transaction History</h2>
+            <aritcle class="history">
+                <div class="add-history-income">
+                    <div class="trans-state">
+                        <h5 class="icon-income">&#x1F861;</h5>
+                        <div class="hist-info">
+                            <p class="hist-descrip">Salary</p>
+                            <p class="hist-date">12:30 PM, Oct 25, 2025</p>
+                        </div>
+                    </div>
+                    <div class="amount-btn">
+                        <p id="added-amt-income">+10,000 CFA</p>
+                        <p id="del-btn">&cross;</p>
+                    </div>
+                </div>
+                  <div class="add-history-expense">
+                    <div class="trans-state">
+                        <h5 class="icon-expense">&#x1f863;</h5>
+                        <div class="hist-info">
+                            <p class="hist-descrip">School Fee</p>
+                            <p class="hist-date">12:30 PM, Oct 25, 2025</p>
+                        </div>
+                    </div>
+                    <div class="amount-btn">
+                        <p id="added-amt-expense">-4249 CFA</p>
+                       <p class="del-btn">&cross;</p>
+                    </div>
+                </div>
+            </aritcle>
+        </section>
+
+        <section class="statistic">
+            <h3>Card</h3>
+            <article class="card">
+                <header class="card-header">
+                    <h3 class="visa">VISA</h3>
+                    <div>
+                        <p>Current Balance</p>
+                        <h3 id="card-amt"> 5,750 CFA</h3>
+                    </div>
+                </header>
+                <img src="assets/chipicon.png" alt="Chip icon" class="chipicon">
+                <p class="number">1234 1234 1234 1234 1234</p>
+                <p>John Doe</p>
+            </article>
+            <article class="chart">
+                <h3>Expense Chart</h3>
+                <canvas id="my-chart">
+                </canvas>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p>&#x1F3DB; &copy; 2026 All rights reserved.</p>
+            <div class="socialicons">
+                <i class="fa fa-github"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-facebook"></i>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
