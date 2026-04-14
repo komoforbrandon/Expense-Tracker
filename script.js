@@ -31,8 +31,8 @@ function parseCurrency (value) {
 
 function formatCurrency (value) {
   return value.toLocaleString('en-US', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 1
   })
 }
 
@@ -112,7 +112,7 @@ function getTransactionData () {
 }
 
 function updateAmountElement (element, nextValue) {
-  element.textContent = formatCurrency(nextValue)
+  element.textContent = formatCurrency(nextValue) + ' CFA'
 }
 
 function updateSummaryTotals (transaction, direction = 1) {
