@@ -8,7 +8,7 @@ const totalExpense = document.getElementById('expense-amount')
 const cardAmt = document.getElementById('card-amt')
 const btn = document.getElementById('trans-btn')
 const amountInput = document.getElementById('input-amount')
-const dateInput = document.getElementById('date')
+const dateInput = new Date().toISOString().split('T')[0]
 const categoryInput = document.getElementById('category')
 const expenseCategoryInput = document.getElementById('expensecategory')
 const historyContainer = document.querySelector('.history')
@@ -58,14 +58,6 @@ function validateTransaction (type, amount, dateValue, category, expenseType) {
     }
   }
 
-  if (!dateValue) {
-    return {
-      isValid: false,
-      message: 'Select a transaction date before adding the transaction.',
-      field: dateInput
-    }
-  }
-
   if (!category) {
     return {
       isValid: false,
@@ -88,7 +80,7 @@ function validateTransaction (type, amount, dateValue, category, expenseType) {
 function getTransactionData () {
   const type = expenseOption.value
   const amount = Number.parseFloat(amountInput.value)
-  const dateValue = dateInput.value
+  const dateValue = new Date().toISOString().split('T')[0]
   const category = categoryInput.value.trim()
   const expenseType = expenseCategoryInput.value
   const validation = validateTransaction(
@@ -170,7 +162,7 @@ function createHistoryItem (transaction) {
       </div>
     </div>
     <div class="amount-btn">
-      <p class="${amountClass}">${amountPrefix}&dollar;${formatCurrency(transaction.amount)}</p>
+      <p class="${amountClass}">${amountPrefix} ${formatCurrency(transaction.amount)} CFA</p>
       <p class="del-btn">&cross;</p>
     </div>
   `
@@ -304,7 +296,6 @@ function deleteTransaction (deleteButton) {
 
 expenseOption.addEventListener('change', toggleExpenseCategory)
 amountInput.addEventListener('input', () => clearFieldValidation(amountInput))
-dateInput.addEventListener('input', () => clearFieldValidation(dateInput))
 categoryInput.addEventListener('input', () => clearFieldValidation(categoryInput))
 expenseCategoryInput.addEventListener('change', () =>
   clearFieldValidation(expenseCategoryInput)
